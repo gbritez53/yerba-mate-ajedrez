@@ -2,7 +2,7 @@ import React from "react";
 
 const Productos = () => {
   return (
-    <div className="px-20 py-12">
+    <section className="px-48 py-12">
       <h1 className="text-5xl text-center font-bold py-8">Productos</h1>
       <p>
         Sed accusantium similique molestias eius repellat laboriosam modi
@@ -14,7 +14,7 @@ const Productos = () => {
         cupiditate voluptate temporibus impedit facilis iure ducimus explicabo
         quos commodi mollitia.
       </p>
-    </div>
+    </section>
   );
 };
 

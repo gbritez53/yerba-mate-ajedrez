@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Turn as Hamburger } from "hamburger-react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const router = useRouter();
   return (
     <>
       <nav className="bg-white h-[80px]">
@@ -28,16 +30,43 @@ const Navbar = () => {
 
             <div className="flex space-x-12 items-center font-medium text-gray-600">
               <Link href="/">
-                <a className="text-lg">Inicio</a>
+                <a
+                  className={`${
+                    router.pathname === "/" && "text-lime-500 font-semibold"
+                  } text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
+                >
+                  Inicio
+                </a>
               </Link>
               <Link href="/nosotros">
-                <a className="text-lg">Nosotros</a>
+                <a
+                  className={`${
+                    router.pathname === "/nosotros" &&
+                    "text-lime-500 font-semibold"
+                  } text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
+                >
+                  Nosotros
+                </a>
               </Link>
               <Link href="/productos">
-                <a className="text-lg">Productos</a>
+                <a
+                  className={`${
+                    router.pathname === "/productos" &&
+                    "text-lime-500 font-semibold"
+                  } text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
+                >
+                  Productos
+                </a>
               </Link>
               <Link href="/contacto">
-                <a className="text-lg">Contacto</a>
+                <a
+                  className={`${
+                    router.pathname === "/contacto" &&
+                    "text-lime-500 font-semibold"
+                  } text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
+                >
+                  Contacto
+                </a>
               </Link>
               <span className="md:hidden">
                 <Hamburger

@@ -2,8 +2,9 @@ import React from "react";
 
 const Nosotros = () => {
   return (
-    <div className="px-20 py-12">
+    <section className="px-48 py-12">
       <h1 className="text-5xl text-center font-bold py-8">Nosotros</h1>
+
       <p className="pb-4">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis qui
         quas nulla minima in maiores, officia, provident, aliquam assumenda
@@ -20,7 +21,7 @@ const Nosotros = () => {
         vel ipsum eum nam officia accusantium inventore, dignissimos sequi quae
         quo, voluptate nobis provident asperiores, blanditiis dolore dolores.
       </p>
-    </div>
+    </section>
   );
 };
 
