@@ -1,11 +1,11 @@
 import React from "react";
+import Navbar from "components/Navbar";
 
 const AppLayout = ({ children }) => {
   return (
     <>
-      <main className="grid place-content-center h-screen px-4 md:px-8 lg:px-12">
-        {children}
-      </main>
+      <Navbar />
+      <main className="grid place-content-center gap-4">{children}</main>
     </>
   );
 };
