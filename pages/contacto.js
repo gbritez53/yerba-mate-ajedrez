@@ -1,8 +1,9 @@
 import React from "react";
+import Section from "components/Section";
 
 const Contacto = () => {
   return (
-    <section className="px-48 py-12">
+    <Section>
       <h1 className="text-5xl text-center font-bold py-8">Contacto</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolores
@@ -21,7 +22,7 @@ const Contacto = () => {
         accusamus, adipisci quas? Praesentium eligendi dolorum quam! Natus
         similique nesciunt doloremque commodi unde magni sequi veniam dolor?
       </p>
-    </section>
+    </Section>
   );
 };
 

@@ -1,8 +1,9 @@
 import React from "react";
+import Section from "components/Section";
 
 const Nosotros = () => {
   return (
-    <section className="px-48 py-12">
+    <Section>
       <h1 className="text-5xl text-center font-bold py-8">Nosotros</h1>
 
       <p className="pb-4">
@@ -21,7 +22,7 @@ const Nosotros = () => {
         vel ipsum eum nam officia accusantium inventore, dignissimos sequi quae
         quo, voluptate nobis provident asperiores, blanditiis dolore dolores.
       </p>
-    </section>
+    </Section>
   );
 };
 
