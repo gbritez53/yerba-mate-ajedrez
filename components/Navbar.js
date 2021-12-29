@@ -1,3 +1,4 @@
+import useWindowSize from "hooks/useWindowSize";
 import { useState, useRef, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
@@ -8,6 +9,7 @@ import { navLinks } from "constants/navlinks";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const closeMobileMenu = () => setOpen(false);
+  const { width } = useWindowSize();
   const router = useRouter();
   const wrapperRef = useRef(null);
 
@@ -30,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav ref={wrapperRef}>
-      <div className="bg-white h-[80px]">
+      <div className="bg-white py-2">
         <div className="max-w-full lg:max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex space-x-4 items-center">
@@ -77,23 +79,26 @@ const Navbar = () => {
       </div>
 
       {/* mobile menu */}
-      {isOpen && (
-        <nav
-          id="mobileMenu"
-          className="md:hidden bg-white flex flex-col items-center"
-        >
-          {navLinks.map((link, i) => (
-            <Link key={i} href={link.path}>
-              <a
-                onClick={closeMobileMenu}
-                className="py-4 w-full text-center hover:bg-lime-500 hover:text-white"
-              >
-                {link.name}
-              </a>
-            </Link>
-          ))}
-        </nav>
-      )}
+
+      <div
+        className={`${
+          isOpen ? "h-56 " : "h-0 "
+        }bg-white flex flex-col items-center overflow-hidden transition-all ease-out duration-300`}
+      >
+        {navLinks.map((link, i) => (
+          <Link key={i} href={link.path}>
+            <a
+              onClick={closeMobileMenu}
+              className={`${
+                router.pathname === link.path &&
+                "bg-lime-500 font-semibold text-white"
+              } py-4 w-full text-center hover:bg-lime-500 `}
+            >
+              {link.name}
+            </a>
+          </Link>
+        ))}
+      </div>
     </nav>
   );
 };
