@@ -5,7 +5,7 @@ const AppLayout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="grid place-content-center gap-4">{children}</main>
+      <main className="grid place-content-center gap-4 pt-20">{children}</main>
     </>
   );
 };

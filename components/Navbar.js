@@ -4,7 +4,7 @@ import { Turn as Hamburger } from "hamburger-react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { navLinks } from "constants/navlinks";
+import { navLinks } from "constants/index";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav ref={wrapperRef}>
-      <div className="bg-white py-2">
+      <div className="bg-white fixed z-50 w-full">
         <div className="max-w-full lg:max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex space-x-4 items-center">
@@ -50,14 +50,14 @@ const Navbar = () => {
                 </a>
               </Link>
             </div>
-            <div className="hidden md:flex space-x-12 items-center font-medium text-gray-600">
+            <div className="hidden md:flex items-center font-medium text-gray-600">
               {navLinks.map((link, i) => (
                 <Link key={i} href={link.path}>
                   <a
                     className={`${
                       router.pathname === link.path &&
-                      "text-lime-500 font-semibold"
-                    } text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
+                      "text-white bg-lime-500 font-semibold"
+                    } py-7 px-12 text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
                   >
                     {link.name}
                   </a>
@@ -92,7 +92,7 @@ const Navbar = () => {
               className={`${
                 router.pathname === link.path &&
                 "bg-lime-500 font-semibold text-white"
-              } py-4 w-full text-center hover:bg-lime-500 `}
+              } py-4 w-full text-center hover:text-white hover:bg-lime-500 `}
             >
               {link.name}
             </a>
