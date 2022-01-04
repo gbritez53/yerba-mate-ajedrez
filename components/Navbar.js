@@ -27,7 +27,6 @@ const Navbar = () => {
       };
     }, [ref]);
   }
-
   useOutsideClick(wrapperRef);
 
   return (
@@ -56,8 +55,8 @@ const Navbar = () => {
                   <a
                     className={`${
                       router.pathname === link.path &&
-                      "text-white bg-lime-500 font-semibold"
-                    } py-7 px-12 text-lg transform hover:scale-110 hover:-translate-y-1 transition-all duration-300 ease-in-out`}
+                      "text-white bg-lime-600 font-semibold"
+                    }  py-7 px-12 text-lg transform hover:scale-110 transition-all duration-300 ease-in-out`}
                   >
                     {link.name}
                   </a>
