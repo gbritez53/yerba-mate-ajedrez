@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import useWindowSize from "hooks/useWindowSize";
 import { useState, useRef, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
@@ -5,6 +6,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "constants/index";
+import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -50,18 +52,38 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="hidden md:flex items-center font-medium text-gray-600">
-              {navLinks.map((link, i) => (
-                <Link key={i} href={link.path}>
-                  <a
-                    className={`${
-                      router.pathname === link.path &&
-                      "text-white bg-lime-600 font-semibold"
+
+              <Link href="/">
+                <a
+                  className={`${router.pathname === "/" &&
+                    "text-white bg-lime-600 font-semibold"
                     }  py-7 px-12 text-lg transform hover:scale-110 transition-all duration-300 ease-in-out`}
-                  >
-                    {link.name}
-                  </a>
-                </Link>
-              ))}
+                >
+                  Inicio
+                </a>
+              </Link>
+
+              <Link href="/nosotros">
+                <a
+                  className={`${router.pathname === "/nosotros" &&
+                    "text-white bg-lime-600 font-semibold"
+                    }  py-7 px-12 text-lg transform hover:scale-110 transition-all duration-300 ease-in-out`}
+                >
+                  Nosotros
+                </a>
+              </Link>
+
+              <Dropdown />
+
+              <Link href="/contacto">
+                <a
+                  className={`${router.pathname === "/contacto" &&
+                    "text-white bg-lime-600 font-semibold"
+                    }  py-7 px-12 text-lg transform hover:scale-110 transition-all duration-300 ease-in-out`}
+                >
+                  Contacto
+                </a>
+              </Link>
             </div>
             <span className="md:hidden">
               <Hamburger
@@ -80,18 +102,16 @@ const Navbar = () => {
       {/* mobile menu */}
 
       <div
-        className={`${
-          isOpen ? "h-56 " : "h-0 "
-        }bg-white flex flex-col items-center overflow-hidden transition-all ease-out duration-300`}
+        className={`${isOpen ? "h-56 " : "h-0 "
+          }bg-white flex flex-col items-center overflow-hidden transition-all ease-out duration-300`}
       >
         {navLinks.map((link, i) => (
           <Link key={i} href={link.path}>
             <a
               onClick={closeMobileMenu}
-              className={`${
-                router.pathname === link.path &&
-                "bg-lime-500 font-semibold text-white"
-              } py-4 w-full text-center hover:text-white hover:bg-lime-500 `}
+              className={`${router.pathname === link.path &&
+                "bg-lime-600 font-semibold text-white"
+                } py-4 w-full text-center hover:text-white hover:bg-lime-600 `}
             >
               {link.name}
             </a>
@@ -103,3 +123,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

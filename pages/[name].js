@@ -1,10 +1,12 @@
 import React from "react";
 import Section from "components/Section";
+import { useRouter } from "next/router";
 
 const Productos = () => {
+  const {query} = useRouter();
   return (
     <Section>
-      <h1 className="text-5xl text-center font-bold py-8">Productos</h1>
+      <h1 className="text-5xl text-center font-bold py-8">{query.name}</h1>
       <p>
         Sed accusantium similique molestias eius repellat laboriosam modi
         mollitia autem aperiam quas impedit unde, aliquid dicta laudantium iure
