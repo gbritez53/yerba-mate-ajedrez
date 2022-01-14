@@ -6,7 +6,7 @@ const Text = () => {
   return (
     <Section className="body-font">
       <div className="container px-5 py-8 mx-auto flex flex-wrap">
-        <h1 className="text-5xl text-center font-bold pb-8">
+        <h1 className="text-3xl md:text-5xl text-center font-bold pb-8">
           Características de la Yerba Orgánica
         </h1>
 

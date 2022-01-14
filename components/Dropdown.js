@@ -41,7 +41,7 @@ export default function Dropdown() {
                         active ? "bg-lime-600 text-white" : "text-gray-900"
                       } group flex items-center w-full px-2 py-2 `}
                     >
-                      Yerba Mate Ajedrez ¡JA! ¡QUE MATE!
+                      Yerba Mate Ajedrez
                     </a>
                   </Link>
                 </button>
