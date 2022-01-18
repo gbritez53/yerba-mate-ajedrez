@@ -34,7 +34,7 @@ export default function Dropdown() {
           <div className=" ">
             <Menu.Item>
               {({ active }) => (
-                <button>
+                <button className="w-full">
                   <Link href="/yerba-mate-ajedrez">
                     <a
                       className={`${
