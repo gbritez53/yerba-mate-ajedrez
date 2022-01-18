@@ -22,6 +22,10 @@ const Contacto = () => {
         accusamus, adipisci quas? Praesentium eligendi dolorum quam! Natus
         similique nesciunt doloremque commodi unde magni sequi veniam dolor?
       </p>
+      <div className="p-2 w-full pt-8 mt-8 text-center">
+        <a className="text-indigo-700">yerbamateajedrez@gmail.com</a>
+        <p className="leading-normal my-5">+54 376 423 1666</p>
+      </div>
     </Section>
   );
 };
