@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav ref={wrapperRef}>
-      <div className="bg-stone-200 fixed z-50 w-full">
+      <div className="bg-cyan-100 fixed z-50 w-full">
         <div className="max-w-full lg:max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex space-x-4 items-center">
