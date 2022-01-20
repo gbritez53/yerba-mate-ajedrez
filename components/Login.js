@@ -36,7 +36,7 @@ const Login = () => {
             className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-lime-500 rounded border border-gray-600 focus:border-lime-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           />
         </div>
-        <button className="text-white bg-lime-600 border-0 py-2 px-8 mt-4 focus:outline-none hover:bg-lime-700 rounded text-lg transition-all ease-in-out duration-300">
+        <button className="text-white bg-primary border-0 py-2 px-8 mt-4 focus:outline-none hover:bg-primaryHover rounded text-lg transition-all ease-in-out duration-300">
           Iniciar Sesión
         </button>
       </div>

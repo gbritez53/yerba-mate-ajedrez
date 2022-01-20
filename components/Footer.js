@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <footer className="text-gray-400 bg-gray-900 w-full">
+      <div className="container px-5 py-6 md:py-8 mx-auto flex items-center sm:flex-row flex-col">
         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
           &copy; 2022 Yerba mate ajedrez — todos los derechos reservados
         </p>
@@ -13,7 +13,6 @@ const Footer = () => {
               fill="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWeight="2"
               className="w-5 h-5"
               viewBox="0 0 24 24"
             >
@@ -25,7 +24,6 @@ const Footer = () => {
               fill="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWeight="2"
               className="w-5 h-5"
               viewBox="0 0 24 24"
             >
@@ -38,7 +36,6 @@ const Footer = () => {
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWeight="2"
               className="w-5 h-5"
               viewBox="0 0 24 24"
             >
@@ -52,7 +49,6 @@ const Footer = () => {
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWeight="0"
               className="w-5 h-5"
               viewBox="0 0 24 24"
             >

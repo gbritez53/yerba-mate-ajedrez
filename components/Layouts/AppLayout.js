@@ -8,7 +8,7 @@ const AppLayout = ({ children }) => {
     <>
       <Navbar />
       <WhatsappButton />
-      <main className="grid place-content-center gap-4 pt-20">{children}</main>
+      <main className="flex justify-center min-h-screen ">{children}</main>
       <Footer />
     </>
   );
