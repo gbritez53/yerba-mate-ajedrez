@@ -50,8 +50,8 @@ const Navbar = () => {
                   </figure>
                 </a>
               </Link>
-              <div className="flex flex-col items-center uppercase">
-                <p className=" md:text-4xl font-black text-green-900">
+              <div className="flex flex-col md:items-center uppercase">
+                <p className="text-2xl md:text-4xl font-black text-green-900">
                   Yerba mate
                 </p>
                 <span className="text-sm">Estacionamiento Natural</span>
