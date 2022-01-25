@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Section from "components/Section";
 import Slider from "components/Slider";
 import Text from "components/Text";
 

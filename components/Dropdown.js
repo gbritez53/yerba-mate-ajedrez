@@ -5,16 +5,20 @@ import Link from "next/link";
 
 export default function Dropdown() {
   const router = useRouter();
-
-  console.log("DROPROUTRT", router);
+  const {
+    query: { category, product },
+  } = router;
+  console.log("Router", router);
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button>
           <a
             className={`${
-              router.asPath === `/${router.query.name}` &&
-              "text-white bg-lime-500 font-semibold"
+              router.asPath === `/${category}`
+                ? "text-white bg-lime-500 font-semibold"
+                : router.asPath === `/${category}/${product}` &&
+                  "text-white bg-lime-500 font-semibold"
             }  py-8 px-12 text-lg transform font-medium hover:scale-110 transition-all duration-300 ease-in-out`}
           >
             Productos
@@ -39,7 +43,7 @@ export default function Dropdown() {
                     router.asPath === "/yerba-mate-ajedrez"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Yerba Mate Ajedrez
                 </a>
@@ -54,7 +58,7 @@ export default function Dropdown() {
                     router.asPath === "/yerba-mate-taithang"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Yerba Mate Taithang
                 </a>
@@ -70,7 +74,7 @@ export default function Dropdown() {
                     router.asPath === "/azucar-mascabo"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Az&uacute;car Mascabo
                 </a>
@@ -85,7 +89,7 @@ export default function Dropdown() {
                     router.asPath === "/mate-cocido"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Mate Cocido
                 </a>
@@ -100,7 +104,7 @@ export default function Dropdown() {
                     router.asPath === "/fecula-de-mandioca"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   F&eacute;cula de Mandioca
                 </a>
@@ -115,7 +119,7 @@ export default function Dropdown() {
                     router.asPath === "/farina-de-mandioca"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Fariña de Mandioca
                 </a>
@@ -130,7 +134,7 @@ export default function Dropdown() {
                     router.asPath === "/tinturas"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Tinturas
                 </a>
@@ -145,7 +149,7 @@ export default function Dropdown() {
                     router.asPath === "/te-en-hebras"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   T&eacute; en Hebras
                 </a>
@@ -161,7 +165,7 @@ export default function Dropdown() {
                     router.asPath === "/productos"
                       ? "bg-lime-500 text-white"
                       : ""
-                  } group flex items-center w-full py-3 px-4`}
+                  } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
                   Otros Productos
                 </a>
