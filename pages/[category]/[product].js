@@ -7,11 +7,11 @@ const Productos = ({ data }) => {
 
   return (
     <Section>
-      <div class="min-w-screen min-h-screen flex items-center p-5 lg:p-10 overflow-hidden relative">
-        <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
-          <div class="md:flex items-center -mx-10">
-            <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
-              <div class="relative">
+      <div className="min-w-screen min-h-screen flex items-center p-5 lg:p-10 overflow-hidden relative">
+        <div className="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+          <div className="md:flex items-center -mx-10">
+            <div className="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+              <div className="relative">
                 <figure className="relative h-52 md:h-[450px] w-full">
                   <Image
                     src={product.imgURL}
@@ -21,18 +21,18 @@ const Productos = ({ data }) => {
                     objectPosition="center"
                   />
                 </figure>
-                <div class="border-4 border-lime-600 absolute z-0 inset-1 inset-y-2 md:inset-10"></div>
+                <div className="border-4 border-lime-600 absolute z-0 inset-1 inset-y-2 md:inset-10"></div>
               </div>
             </div>
-            <div class="w-full md:w-1/2 px-10">
-              <div class="mb-10">
-                <h1 class="font-bold text-2xl md:text-4xl mb-5 text-lime-800 text-center md:text-left">
+            <div className="w-full md:w-1/2 px-10">
+              <div className="mb-10">
+                <h1 className="font-bold text-2xl md:text-4xl mb-5 text-lime-800 text-center md:text-left">
                   {product.name}
                 </h1>
                 <p className="text-lg font-bold">
                   Peso: <span className="font-medium">{product.size}</span>
                 </p>
-                <p class="text-sm">
+                <p className="text-sm">
                   <span className="text-lg font-semibold">Descripcion:</span>{" "}
                   <br />
                   Lorem ipsum dolor sit, amet consectetur adipisicing, elit.
@@ -42,8 +42,8 @@ const Productos = ({ data }) => {
                 </p>
               </div>
               <div>
-                <div class="inline-block align-bottom">
-                  <button class="bg-yellow-300 opacity-75 uppercase hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold">
+                <div className="inline-block align-bottom">
+                  <button className="bg-yellow-300 opacity-75 uppercase hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold">
                     Contactar
                   </button>
                 </div>
