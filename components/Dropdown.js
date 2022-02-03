@@ -8,7 +8,7 @@ export default function Dropdown() {
   const {
     query: { category, product },
   } = router;
-  console.log("Router", router);
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
