@@ -20,7 +20,6 @@ export default Productos;
 export async function getStaticPaths() {
   const res = await fetch(
     "https://yerba-mate-ajedrez-server.herokuapp.com/v1/categories"
-    // "http://localhost:8080/v1/categories/"
   );
   const data = await res.json();
   return {
@@ -39,7 +38,6 @@ export async function getStaticProps({ params }) {
   try {
     const req = await fetch(
       `https://yerba-mate-ajedrez-server.herokuapp.com/v1/categories/${params.category}`
-      // `http://localhost:8080/v1/categories/${params.category}`
     );
     const data = await req.json();
     return {

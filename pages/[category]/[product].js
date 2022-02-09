@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const Productos = ({ data }) => {
   const { product } = data;
-
   return (
     <Section>
       <div className="min-w-screen min-h-screen flex items-center p-5 lg:p-10 overflow-hidden relative">
@@ -21,7 +20,7 @@ const Productos = ({ data }) => {
                     objectPosition="center"
                   />
                 </figure>
-                <div className="border-4 border-lime-600 absolute z-0 inset-1 inset-y-2 md:inset-10"></div>
+                {/* <div className="border-4 border-lime-600 absolute z-0 inset-1 inset-y-2 md:inset-10"></div> */}
               </div>
             </div>
             <div className="w-full md:w-1/2 px-10">
@@ -43,7 +42,7 @@ const Productos = ({ data }) => {
               </div>
               <div>
                 <div className="inline-block align-bottom">
-                  <button className="bg-yellow-300 opacity-75 uppercase hover:opacity-100 text-yellow-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold">
+                  <button className="bg-lime-400 opacity-75 uppercase hover:opacity-100 text-lime-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold">
                     Contactar
                   </button>
                 </div>
@@ -61,11 +60,10 @@ export default Productos;
 export async function getStaticPaths() {
   const res = await fetch(
     "https://yerba-mate-ajedrez-server.herokuapp.com/v1/products"
-    // `http://localhost:8080/v1/products/`
   );
-  const data = await res.json();
+  const { products } = await res.json();
   return {
-    paths: data.products.map((product) => {
+    paths: products.map((product) => {
       return {
         params: {
           category: product.categoryPath,
@@ -81,7 +79,6 @@ export async function getStaticProps({ params }) {
   try {
     const req = await fetch(
       `https://yerba-mate-ajedrez-server.herokuapp.com/v1/products/${params.product}`
-      // `http://localhost:8080/v1/products/${params.product}`
     );
     const data = await req.json();
     return {
