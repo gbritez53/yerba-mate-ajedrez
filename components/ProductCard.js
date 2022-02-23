@@ -10,7 +10,7 @@ const ProductCard = ({ data }) => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 10500);
+    }, 9000);
   }, []);
 
   return (
@@ -20,7 +20,7 @@ const ProductCard = ({ data }) => {
           return (
             <div
               key={product._id}
-              className=" shadow-lg rounded-lg h-[400px] w-72 md:w-72 m-auto bg-white overflow-hidden space-y-4"
+              className=" shadow-lg rounded-lg h-[430px] w-72 md:w-72 m-auto bg-white overflow-hidden space-y-4 mb-4"
             >
               <figure className="relative h-60 w-full">
                 {!loading ? (
@@ -38,12 +38,13 @@ const ProductCard = ({ data }) => {
               <div className="px-4 space-y-2 flex flex-col justify-between">
                 <div>
                   <p className="text-lime-700 text-xl font-semibold ">
-                    {product.name}
+                    {product.name} -{" "}
+                    <span className="text-gray-800 text-lg font-medium ">
+                      {product.size}
+                    </span>
                   </p>
-                  <p className="text-gray-800 text-lg font-medium ">
-                    {product.size}
-                  </p>
-                  <p className="truncate hover:text-clip ">
+
+                  <p className="truncate hover:text-clip h-[50px]">
                     {product.description}
                   </p>
                 </div>

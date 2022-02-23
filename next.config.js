@@ -3,7 +3,7 @@ module.exports = {
   images: {
     domains: [
       "images.unsplash.com",
-      "drive.google.com",
+      "yerbamateajedrez.s3.sa-east-1.amazonaws.com",
       "firebasestorage.googleapis.com",
     ],
   },

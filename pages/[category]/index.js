@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 const ProductCard = dynamic(() => import("components/ProductCard"));
 
 const Productos = ({ data }) => {
-  console.log("data", data);
   return (
     <Section>
       <h1 className="text-5xl text-center font-black py-16 uppercase text-green-900">

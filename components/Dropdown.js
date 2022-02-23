@@ -52,15 +52,15 @@ export default function Dropdown() {
           </Menu.Item>
           <Menu.Item>
             <button className="w-full">
-              <Link href="/yerba-mate-taithang">
+              <Link href="/yerba-mate-taihang">
                 <a
                   className={`${
-                    router.asPath === "/yerba-mate-taithang"
+                    router.asPath === "/yerba-mate-taihang"
                       ? "bg-lime-500 text-white"
                       : ""
                   } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}
                 >
-                  Yerba Mate Taithang
+                  Yerba Mate Taihang
                 </a>
               </Link>
             </button>
@@ -162,7 +162,7 @@ export default function Dropdown() {
               <Link href="/productos">
                 <a
                   className={`${
-                    router.asPath === "/productos"
+                    router.asPath === "/otros-productos"
                       ? "bg-lime-500 text-white"
                       : ""
                   } group flex items-center w-full py-3 px-4 hover:bg-lime-500 hover:text-white`}

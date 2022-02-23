@@ -42,9 +42,14 @@ const Productos = ({ data }) => {
               </div>
               <div>
                 <div className="inline-block align-bottom">
-                  <button className="bg-lime-400 opacity-75 uppercase hover:opacity-100 text-lime-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=543764231666"
+                    target="_blanck"
+                    rel="noreferrer"
+                    className="bg-lime-400 opacity-75 uppercase hover:opacity-100 text-lime-900 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+                  >
                     Contactar
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
