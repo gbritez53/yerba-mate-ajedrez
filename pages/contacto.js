@@ -1,30 +1,66 @@
 import React from "react";
 import Section from "components/Section";
+import { MdOutlineEmail, MdCall } from "react-icons/md";
+import { ImWhatsapp } from "react-icons/im";
+import { RiInstagramFill, RiFacebookBoxFill } from "react-icons/ri";
 
 const Contacto = () => {
   return (
-    <Section>
-      <h1 className="text-5xl text-center font-bold py-8">Contacto</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolores
-        iure exercitationem laboriosam dolore modi quidem necessitatibus
-        incidunt, voluptas delectus temporibus atque cum perferendis. Facere
-        nisi obcaecati dicta possimus soluta nulla eligendi accusantium animi
-        explicabo eum minima praesentium, quia corrupti dolorem facilis
-        doloremque mollitia odio et fugiat. Libero deserunt voluptatum, iusto
-        corporis eaque perspiciatis inventore earum facilis sunt quia, nisi
-        laudantium. Illo unde dolores nostrum, rem necessitatibus facilis eos
-        veniam expedita autem nisi corporis deleniti iure consequatur recusandae
-        numquam tenetur quo eveniet placeat, deserunt voluptate voluptatibus
-        dignissimos itaque. Enim tempore ex quo molestias. Perferendis neque eum
-        assumenda asperiores repellat nam alias recusandae similique ullam sed
-        ipsum autem consequuntur eligendi, vitae odio cupiditate, consectetur
-        accusamus, adipisci quas? Praesentium eligendi dolorum quam! Natus
-        similique nesciunt doloremque commodi unde magni sequi veniam dolor?
-      </p>
-      <div className="p-2 w-full pt-8 mt-8 text-center">
-        <a className="text-indigo-700">yerbamateajedrez@gmail.com</a>
-        <p className="leading-normal my-5">+54 376 423 1666</p>
+    <Section classes="xl:px-32 pt-16">
+      <div className="p-6 mr-2 sm:rounded-lg flex flex-col items-center">
+        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight py-4 text-green-900 ">
+          Contacto
+        </h1>
+        <p className="text-lg sm:text-2xl font-medium text-gray-600 mt-2">
+          Si desea adquirir nuestros productos para reventa en comercio
+          mayorista o minorista, almacén, feria o de manera personal, escríbanos
+          a cualquiera de nuestros medios de comunicación habilitados, indicando
+          la finalidad de compra, su localidad y provincia. No dude en
+          escribirnos, estamos para servirles.
+        </p>
+
+        <div className="flex flex-col space-y-4 self-start">
+          <div className="flex items-center mt-8 text-gray-600">
+            <MdCall className="text-4xl text-lime-600" />
+            <div className="ml-4 text-md tracking-wide font-semibold text-lg">
+              +54 376 4231-666 (WhatsApp y llamadas)
+            </div>
+          </div>
+
+          <div className="flex items-center mt-4 text-gray-600">
+            <div className="w-9 h-9 overflow-hidden ">
+              <ImWhatsapp className="text-4xl text-lime-600" />
+            </div>
+            <div className="ml-4 text-md tracking-wide font-semibold text-lg">
+              +54 376 4897-777 (Sólo WhatsApp)
+            </div>
+          </div>
+
+          <div className="flex items-center mt-2 text-gray-600">
+            <MdOutlineEmail className="text-4xl text-lime-600" />
+            <div className="ml-4 text-md tracking-wide font-semibold text-lg">
+              yerbamateajedrez@gmail.com
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center py-16 w-2/3">
+          <h3 className="text-2xl font-bold text-gray-900">
+            ¡TAMBIÉN PODÉS SUMARTE A NUESTRAS REDES SOCIALES!
+          </h3>
+          <div className="flex w-full 2xl:w-2/3 justify-around px-12 py-8">
+            <a href="">
+              <RiInstagramFill className="text-4xl text-lime-600" />
+            </a>
+            <a href="">
+              <RiFacebookBoxFill className="text-4xl text-lime-600" />
+            </a>
+            <a href="">
+              <MdOutlineEmail className="text-4xl text-lime-600" />
+            </a>
+          </div>
+          <p className="font-semibold">YERBA MATE AJEDREZ ¡JÁ! ¡QUE MATE!</p>
+        </div>
       </div>
     </Section>
   );

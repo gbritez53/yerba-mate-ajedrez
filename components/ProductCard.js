@@ -14,7 +14,7 @@ const ProductCard = ({ data }) => {
   }, []);
 
   return (
-    <div className="grid lg:grid-cols-4 gap-8">
+    <div className="grid lg:grid-cols-4 gap-8 pb-16">
       {data.map((category) =>
         category.products.map((product) => {
           return (
@@ -22,15 +22,16 @@ const ProductCard = ({ data }) => {
               key={product._id}
               className=" shadow-lg rounded-lg h-[430px] w-72 md:w-72 m-auto bg-white overflow-hidden space-y-4 mb-4"
             >
-              <figure className="relative h-60 w-full">
+              <figure className="relative">
                 {!loading ? (
-                  <Spinner height={100} width={100} classes="h-48" />
+                  <Spinner height={100} width={100} classes="h-60" />
                 ) : (
                   <Image
                     src={product.imgURL}
                     alt={product.name}
-                    layout="fill"
-                    objectFit="contain"
+                    width={300}
+                    height={240}
+                    objectFit="cover"
                     objectPosition="center"
                   />
                 )}
@@ -38,14 +39,14 @@ const ProductCard = ({ data }) => {
               <div className="px-4 space-y-2 flex flex-col justify-between">
                 <div>
                   <p className="text-lime-700 text-xl font-semibold ">
-                    {product.name} -{" "}
+                    {product.name}{" "}
                     <span className="text-gray-800 text-lg font-medium ">
                       {product.size}
                     </span>
                   </p>
 
-                  <p className="truncate hover:text-clip h-[50px]">
-                    {product.description}
+                  <p className="line-clamp-2  hover:text-clip h-[50px]">
+                    {product.content}
                   </p>
                 </div>
                 <div className="flex justify-center w-full py-2">
