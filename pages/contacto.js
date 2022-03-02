@@ -23,7 +23,7 @@ const Contacto = () => {
           <div className="flex items-center mt-8 text-gray-600">
             <MdCall className="text-4xl text-lime-600" />
             <div className="ml-4 text-md tracking-wide font-semibold text-lg">
-              +54 376 4231-666 (WhatsApp y llamadas)
+              VENTAS: +54 376 4231-666 (WhatsApp y llamadas)
             </div>
           </div>
 
@@ -32,7 +32,7 @@ const Contacto = () => {
               <ImWhatsapp className="text-4xl text-lime-600" />
             </div>
             <div className="ml-4 text-md tracking-wide font-semibold text-lg">
-              +54 376 4897-777 (Sólo WhatsApp)
+              ADMINISTRACIÓN: +54 376 4897-777 (Sólo WhatsApp)
             </div>
           </div>
 
