@@ -1,18 +1,8 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import useInView from "react-cool-inview";
 import Link from "next/link";
-import Spinner from "components/Spinner";
 
 const ProductCard = ({ data }) => {
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(true);
-    }, 9000);
-  }, []);
-
   return (
     <div className="grid lg:grid-cols-4 gap-8 pb-16">
       {data.map((category) =>
@@ -23,18 +13,15 @@ const ProductCard = ({ data }) => {
               className=" shadow-lg rounded-lg h-[430px] w-72 md:w-72 m-auto bg-white overflow-hidden space-y-4 mb-4"
             >
               <figure className="relative">
-                {!loading ? (
-                  <Spinner height={100} width={100} classes="h-60" />
-                ) : (
-                  <Image
-                    src={product.imgURL}
-                    alt={product.name}
-                    width={300}
-                    height={240}
-                    objectFit="cover"
-                    objectPosition="center"
-                  />
-                )}
+                <Image
+                  src={product.imgURL}
+                  alt={product.name}
+                  width={300}
+                  height={240}
+                  objectFit="cover"
+                  objectPosition="center"
+                  onLoadingComplete={() => setLoading(false)}
+                />
               </figure>
               <div className="px-4 space-y-2 flex flex-col justify-between">
                 <div>

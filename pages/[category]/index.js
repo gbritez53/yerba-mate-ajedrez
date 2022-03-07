@@ -35,10 +35,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
+    console.time("getStaticProps");
     const req = await fetch(
       `https://yerba-mate-ajedrez-server.herokuapp.com/v1/categories/${params.category}`
     );
     const data = await req.json();
+    console.timeEnd("getStaticProps");
     return {
       props: {
         data,

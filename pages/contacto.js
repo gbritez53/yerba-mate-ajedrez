@@ -32,7 +32,7 @@ const Contacto = () => {
               <ImWhatsapp className="text-4xl text-lime-600" />
             </div>
             <div className="ml-4 text-md tracking-wide font-semibold text-lg">
-              ADMINISTRACIÓN: +54 376 4897-777 (Sólo WhatsApp)
+              Administración: +54 376 4897-777 (Sólo WhatsApp)
             </div>
           </div>
 

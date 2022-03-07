@@ -4,10 +4,11 @@ import Image from "next/image";
 
 const Text = () => {
   return (
-    <Section className="body-font">
-      <div className="container px-5 py-8 mx-auto flex flex-wrap">
-        <h1 className="text-3xl md:text-5xl font-bold pb-8">
-          Características de la Yerba Orgánica AJEDREZ y TAIHANG
+    <Section>
+      <div className="container px-4 py-8 mx-auto flex flex-wrap justify-center">
+        <h1 className="text-3xl md:text-5xl font-bold pb-8 text-center">
+          Características de la Yerba Orgánica <br />
+          AJEDREZ y TAIHANG
         </h1>
 
         <p className="pb-4 leading-relaxed">
