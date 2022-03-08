@@ -43,7 +43,7 @@ const Nosotros = () => {
           <h2 className="text-4xl font-extrabold tracking-tight py-4 text-green-900 ">
             Nuestra misión:
           </h2>
-          <ul>
+          <ul className="text-lg">
             <li className="list-disc ml-4 mb-4">
               Nos encontramos en una constante búsqueda por mejorar y elevar aún
               más la calidad de nuestros productos, invirtiendo en
