@@ -7,7 +7,7 @@ const WhatsappButton = () => {
       href="https://api.whatsapp.com/send?phone=543764231666"
       target="_blanck"
       rel="noreferrer"
-      className="fixed z-50 bottom-24 md:bottom-20 right-10 transform hover:scale-110 hover:translate-x-1 active:scale-95 hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+      className="fixed z-50 bottom-24 md:bottom-20 right-10 simple-animation animate-pulse hover:animate-none"
     >
       <Whatsapp />
     </a>

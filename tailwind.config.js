@@ -9,6 +9,12 @@ module.exports = {
         primary: "#e7e5e4",
         primaryHover: "#FFF683",
       },
+      fontFamily: {
+        lato: ["Lato", "sans-serif"],
+      },
+      animation: {
+        bounce: "bounce 3s ease-out infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

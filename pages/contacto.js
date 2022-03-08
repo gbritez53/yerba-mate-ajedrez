@@ -23,7 +23,16 @@ const Contacto = () => {
           <div className="flex items-center mt-8 text-gray-600">
             <MdCall className="text-4xl text-lime-600" />
             <div className="ml-4 text-md tracking-wide font-semibold text-lg">
-              VENTAS: +54 376 4231-666 (WhatsApp y llamadas)
+              <p>
+                VENTAS:{" "}
+                <a
+                  className="font-lato hover:text-blue-500"
+                  href="tel:+543764897777"
+                >
+                  +54 376 4231-666
+                </a>{" "}
+                (WhatsApp y llamadas)
+              </p>
             </div>
           </div>
 
@@ -32,7 +41,18 @@ const Contacto = () => {
               <ImWhatsapp className="text-4xl text-lime-600" />
             </div>
             <div className="ml-4 text-md tracking-wide font-semibold text-lg">
-              Administración: +54 376 4897-777 (Sólo WhatsApp)
+              <p>
+                Administración:{" "}
+                <a
+                  className="font-lato"
+                  href="https://api.whatsapp.com/send?phone=543764897777"
+                  target="_blanck"
+                  rel="noreferrer"
+                >
+                  +54 376 4897-777
+                </a>{" "}
+                (Sólo WhatsApp)
+              </p>
             </div>
           </div>
 
@@ -49,13 +69,28 @@ const Contacto = () => {
             ¡TAMBIÉN PODÉS SUMARTE A NUESTRAS REDES SOCIALES!
           </h3>
           <div className="flex w-full 2xl:w-2/3 justify-around px-12 py-8">
-            <a href="">
+            <a
+              className="simple-animation"
+              href="https://www.instagram.com/yerbaajedrez/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <RiInstagramFill className="text-4xl text-lime-600" />
             </a>
-            <a href="">
+            <a
+              className="simple-animation"
+              href="https://www.facebook.com/yerbajedrez"
+              rel="noreferrer"
+              target="_blank"
+            >
               <RiFacebookBoxFill className="text-4xl text-lime-600" />
             </a>
-            <a href="">
+            <a
+              className="simple-animation"
+              href="mailto:yerbamateajedrez@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+            >
               <MdOutlineEmail className="text-4xl text-lime-600" />
             </a>
           </div>
