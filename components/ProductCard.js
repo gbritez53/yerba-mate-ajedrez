@@ -20,7 +20,6 @@ const ProductCard = ({ data }) => {
                   height={240}
                   objectFit="cover"
                   objectPosition="center"
-                  onLoadingComplete={() => setLoading(false)}
                 />
               </figure>
               <div className="px-4 space-y-2 flex flex-col justify-between">

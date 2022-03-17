@@ -1,16 +1,22 @@
 import Section from "components/Section";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const ProductCard = dynamic(() => import("components/ProductCard"));
 
 const Productos = ({ data }) => {
   return (
-    <Section>
-      <h1 className="text-5xl text-center font-black py-16 uppercase text-green-900">
-        {data[0].name}
-      </h1>
-      <ProductCard data={data} />
-    </Section>
+    <>
+      <Head>
+        <title>{data.length === 0 ? "Yerba Mate Ajedrez" : data[0].name}</title>
+      </Head>
+      <Section>
+        <h1 className="text-5xl text-center font-black py-16 uppercase text-green-900">
+          {data[0].name}
+        </h1>
+        <ProductCard data={data} />
+      </Section>
+    </>
   );
 };
 
